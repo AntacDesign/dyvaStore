@@ -1,0 +1,41 @@
+---
+import {Card} from "../components/Card.tsx"
+
+
+---
+
+<main class="w-screen flex flex-col">
+  <h1 class="flex flex-col w-max items-center text-5xl gap-4 py-7 self-center">
+    <span class="text-sombra translate-x-[-9rem]">VIRTUAL</span>
+    <span class="flex items-center translate-x-10">
+      <span class="text-sombra " style="--gap:4em;"> STORE </span>
+      <span class="left-[100%] text-sm font-extralight w-[13em] ml-4 bg-white z-10"
+        >THE NEXT GENERATION OF E-COMMERCE</span
+      ></span
+    >
+    <span class="text-sombra translate-x-20" style="--gap:5.9em;">PLATFORM</span>
+  </h1>
+  <section class="container m-auto border-2 flex">
+    <Card  type={0}  href="" title="hola" body="" ></Card>
+  </section>
+  <section class="container m-auto border-2 flex">
+    <Card  href="" title="" body="" type={1} ></Card>
+  </section>
+</main>
+
+<style>
+  .text-sombra {
+    --gap: 5em;
+    --color: rgba(0, 0, 0, 0.05);
+    filter: drop-shadow(calc(var(--gap)) 0 0 var(--color))
+      drop-shadow(calc(var(--gap) * -1) 0 0 var(--color))
+      drop-shadow(calc(var(--gap) + var(--gap)) 0 0 var(--color))
+      drop-shadow(calc((var(--gap) + var(--gap)) * -1) 0 0 var(--color))
+      drop-shadow(calc(var(--gap) + var(--gap) * 2) 0 0 var(--color))
+      drop-shadow(calc((var(--gap) + var(--gap) * 2) * -1) 0 0 var(--color))
+      drop-shadow(calc(var(--gap) + var(--gap) * 3) 0 0 var(--color))
+      drop-shadow(calc((var(--gap) + var(--gap) * 3) * -1) 0 0 var(--color))
+      drop-shadow(calc(var(--gap) + var(--gap) * 4) 0 0 var(--color))
+      drop-shadow(calc((var(--gap) + var(--gap) * 4) * -1) 0 0 var(--color));
+  }
+</style>
