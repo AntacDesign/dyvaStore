@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+import Logo from "../components/Logo.astro";
+---
+
+<nav class="w-screen p-4 border-b-2 border-gray-400 flex items-center justify-between lg:px-10">
+  <Logo />
+  <ul class="nav flex text-sm lg:w-2/5 lg:justify-between gap-4">
+    <li><a href="#"> FASHION </a></li>
+    <li><a href="#"> BEAUTY </a></li>
+    <li><a href="#"> CULTURE </a></li>
+    <li><a href="#"> LIFE & LOVE </a></li>
+    <li><a href="#"> HOROSCOPE </a></li>
+  </ul>
+  <button class="bg-gray-200 rounded-lg p-2 text-sm flex items-center gap-2">
+    BOOK A DEMO <Icon name="bitcoin-icons:arrow-right-filled" />
+  </button>
+</nav>
