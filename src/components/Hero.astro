@@ -1,10 +1,28 @@
 ---
+import { Icon } from "astro-icon/components"
 import {Card} from "../components/Card.tsx"
-
+const icons=(icon:String)=>{
+  switch (icon) {
+    case "arrow":
+      return "bitcoin-icons:arrow-right-filled"
+      break;
+    case "pieChart":
+      return "flowbite:chart-pie-outline"
+      break;
+      case "star":
+      return "hugeicons:star"
+      break;
+      case "scan":
+      return "mage:scan" 
+      break;
+    default:
+        return "no encontramos ese icono"
+      break;
+  }}
 
 ---
 
-<main class="w-screen flex flex-col">
+<main class="w-screen flex flex-col overflow-x-hidden">
   <h1 class="flex flex-col w-max items-center text-5xl gap-4 py-7 self-center">
     <span class="text-sombra translate-x-[-9rem]">VIRTUAL</span>
     <span class="flex items-center translate-x-10">
@@ -15,13 +33,21 @@ import {Card} from "../components/Card.tsx"
     >
     <span class="text-sombra translate-x-20" style="--gap:5.9em;">PLATFORM</span>
   </h1>
-  <section class="container m-auto border-2 flex list-none">
-    <Card  title="hola" body="" ></Card>
-    <Card  title="hola" body="" ></Card>
-    <Card  title="hola" body="" ></Card>
+  <section class="container m-auto flex flex-col md:flex-row list-none px-4 gap-8 box-border">
+    <Card  title={[]} body={["Higher time spent than traditional e-commerce for a leading Consumer Goods Brand"]} img="/public/imgs/wall-ceil.webp" >
+      <Icon name={icons("arrow")} class="text-2xl text-gray-600"/>
+    </Card>
+    <Card  title={[]} body={[]} img="/public/imgs/jeans-tshirt.webp">
+      <Icon name={icons("arrow")} class="text-2xl text-gray-600 "/>
+    </Card>
+    <Card type={1} title={["ALVA STONE",",SVP OF GLOBAL VISUAL EXPERIENCE"]} body={["People are looking for more than just products on a shelf.","They want to learn about our brand's story, the narrative. ","That's what we've built with Obsess."]} >
+      <Icon name={icons("arrow")} class="text-2xl text-gray-600"/>
+    </Card>
   </section>
-  <section class="container m-auto border-2 flex list-none">
-    <Card  href="" title="" body="" type={1} ></Card>
+  <section class="container m-auto flex list-none px-4">
+    <!-- <Card  href="" title="" body="" type={1} >
+      <Icon name={icons("arrow")} class="text-xl text-gray-600"/>
+    </Card> -->
   </section>
 </main>
 
