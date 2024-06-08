@@ -53,7 +53,7 @@ export const Card = ({
   } else if (type == 1) {
     return (
       /* card solo texto*/
-      <li className="flex flex-col relative flex-1 rounded-3xl aspect-[4/3] box-border min-h-40 max-h-72">
+      <li className="flex flex-col relative flex-1 rounded-3xl sm:aspect-[4/3] box-border min-h-40 max-h-72">
         {/* sección topCard */}
         <div className="flex bg-white rounded-br-3xl">
           <div className="relative">
@@ -68,12 +68,23 @@ export const Card = ({
               {children}
             </a>
                 </div>
-          <div className="text-xs z-0 flex-1 border-2 p-2 box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 h-14">
-            <h2>{title}</h2>
+                {/* title card*/}
+          <div className="text-xs z-0 flex flex-1 border-2 p-6 py-0 items-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 h-14 relative">
+            <div className="size-6 bg-white absolute bottom-[-2px] left-0"></div>
+            <div className="size-6 bg-white absolute bottom-[-2px] right-0"></div>
+            <h2 className="text-gray-500 font-medium">
+              <span className="text-black">{title[0]}</span>{title[1]}
+              </h2>
           </div>
         </div>
-        <div className="h-full w-full text-xs border-2 rounded-3xl rounded-tr-none p-4 box-border">
-          <p>{body}</p>
+        <div className="w-full h-full  flex  items-center text-xs border-2 rounded-3xl rounded-tr-none p-4 box-border">
+          <p className="text-lg font-normal">
+            {body[0]}
+            <span className="text-gray-500">
+            {body[1]}
+            </span>
+            {body[2]}
+          </p>
         </div>
         <div></div>
       </li>
