@@ -22,7 +22,7 @@ const icons=(icon:String)=>{
 
 ---
 
-<main class="flex flex-col">
+<main class="flex flex-col mb-10">
   <!-- titulo -->
   <h1 class="flex flex-col w-full overflow-x-hidden items-center text-5xl gap-4 py-7 self-center">
     <span class="text-sombra translate-x-[-9rem]">VIRTUAL</span>
@@ -37,19 +37,19 @@ const icons=(icon:String)=>{
   <!-- cards con imagenes -->
   <section class="container m-auto flex flex-col md:flex-row list-none px-4 gap-8 gap-y-4 box-border my-4 md:h-72  md:max-h-72">
     <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" title={[]} body={["Higher time spent than traditional e-commerce for a leading Consumer Goods Brand"]} img="/imgs/wall-ceil.webp" >
-      <Icon name={icons("arrow")} class="text-2xl text-gray-600"/>
+      <Icon name={icons("arrow")} class="text-4xl text-gray-600"/>
     </Card>
     <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" title={[]} body={[]} img="imgs/jeans-tshirt.webp">
-      <Icon name={icons("arrow")} class="text-2xl text-gray-600 "/>
+      <Icon name={icons("arrow")} class="text-4xl text-gray-600 "/>
     </Card>
     <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" type={1} title={["ALVA STONE",", SVP OF GLOBAL VISUAL EXPERIENCE"]} body={["People are looking for more than just products on a shelf. ","They want to learn about our brand's story, the narrative. ","That's what we've built with Obsess."]} >
       <Icon name={icons("arrow")} class="text-2xl text-gray-600"/>
     </Card>
   </section>
   <!-- card largeImage -->
-  <section class="my-4 container m-auto flex list-none px-4 h-80">
-    <Card imgCss="max-h-96 h-96" title={[]} body={[]} img="imgs/clothes.webp">
-      <Icon name={icons("arrow")} class="text-xl text-gray-600"/>
+  <section class="my-4 container m-auto flex list-none px-4">
+    <Card imgCss="max-h-96 h-96" type={3} title={["OBSESS 3D TECHNOLOGY"]} body={["The next generation of the web will be 3D with faster network speeds and more powerful processors. Obsess is taking the traditional e-commerce stack into the next generation of the web through a 3D, interactive interface. Our patented 3D software renders photorealistic, gamified experiences for brands and retailers via web and mobile browsers."]} img="imgs/clothes.webp">
+      <Icon name={icons("arrow")} class="text-4xl text-gray-600"/>
     </Card>
   </section>
 </main>
