@@ -1,0 +1,60 @@
+---
+interface Props {
+	title: Array<string>;
+	body?: Array<string>;
+	img?: string;
+}
+const {title,body,img} =Astro.props
+---
+<div class="w-full max-w-3xl">
+    <picture class="w-full flex rounded-2xl aspect-[16/8] sm:aspect-[16/7] relative overflow-hidden">
+        <h2 class="z-10 absolute block">{title.map((item:string)=><span class="flex bg-white w-max p-1.5 py-1 pr-2 even:pr-5 rounded-tr-xl rounded-br-xl 
+        /* first */
+        /* top */
+        first:before:block 
+        first:before:size-5 
+        first:before:bg-transparent 
+        first:before:absolute 
+        first:before:left-[100%] 
+        first:before:top-0 
+        first:before:rounded-tl-xl 
+        first:before:shadow-[-.7rem_-.6rem_0_white]
+        /* bottom */
+        first:after:block 
+        first:after:size-5 
+        first:after:bg-transparent 
+        first:after:absolute 
+        first:after:left-[100%] 
+        first:after:bottom-0 
+        first:after:rounded-bl-xl 
+        first:after:shadow-[-.7rem_.3rem_0_white]
+
+        /* last */
+        /* top */
+        last:before:block 
+        last:before:size-5 
+        last:before:bg-transparent 
+        last:before:absolute 
+        last:before:left-[100%] 
+        last:before:top-[-.1rem] 
+        last:before:rounded-tl-xl 
+        last:before:shadow-[-.7rem_0rem_0_white]
+        /* bottom */
+        last:after:block 
+        last:after:size-5 
+        last:after:bg-transparent
+        last:after:absolute 
+        last:after:top-[100%] 
+        last:after:left-0 
+        last:after:rounded-tl-xl 
+        last:after:shadow-[-.3rem_-.3rem_0_white]
+        relative">{item}</span>)}</h2>
+        <img src={img} class="w-full h-[102%] object-cover absolute rounded-[inherit] mt-[-2px] object-right" alt="imagen">
+        <div class="text-xs z-10 self-end flex flex-col py-4 px-5 gap-y-2">
+            <slot/>
+        </div>
+    </picture>
+    <p class="empty:hidden columns-2">
+        {body?.map((item:string)=><p>{item}</p>)}
+    </p>
+</div>
