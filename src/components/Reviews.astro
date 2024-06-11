@@ -27,15 +27,15 @@ const reviews=[
 
 <section class=" border-t-2 border-b-2 py-14 overflow-x-hidden relative">
     <!-- button back -->
-    <button aria-details="button back" class="absolute top-0 bottom-0 w-1/6 md:w-2/6 border-2">
+    <button aria-details="button back" class="absolute top-0 bottom-0 w-1/6 md:w-2/6 z-10">
     </button>
     <!-- button next -->
-    <button aria-details="button back" class="absolute top-0 bottom-0 right-0 w-1/6 md:w-2/6 border-2">
+    <button aria-details="button back" class="absolute top-0 bottom-0 right-0 w-1/6 md:w-2/6 z-10">
     </button>
-    <div class="flex ml-[calc(-50vw-6.8rem)] md:ml-[calc(-25vw+2.5rem)]">
+    <div class="flex translate-x-[calc(-50%-2.3rem)] lg:translate-x-[calc(-18%-2.3rem)]">
     {reviews.map(
         ({user,cargo,body})=>
-        <div class="flex flex-col gap-5 mx-5 min-w-[calc((200vw+5rem)/3)] md:min-w-[calc((120vw+10rem)/3)] odd:text-gray-500 ">
+        <div class="flex flex-col gap-5 mr-10 odd:text-gray-500 min-w-[66%] lg:min-w-[45%] pointer-events-none">
             <h2 class="text-xs w-[12.9rem]">
                 {user},
                 <span class="text-gray-500">

@@ -59,7 +59,7 @@ export const Card = ({
       /* card solo texto*/
       <li className="flex flex-col relative flex-1 rounded-3xl sm:aspect-[4/3] box-border min-h-40 max-h-72">
         {/* sección topCard */}
-        <div className="flex bg-white rounded-br-3xl">
+        <div className="flex bg-transparent rounded-br-3xl">
           {/* container de buttom */}
           <div className="relative pb-1.5">
             {/* objeto que simulan corte */}
@@ -102,9 +102,9 @@ export const Card = ({
   } else if (type == 2) {
     return (
       /* card solo texto 2*/
-      <li className="flex flex-col relative flex-1 rounded-3xl sm:aspect-[4/3] box-border min-h-40 max-h-72">
+      <div className="flex flex-col relative flex-1 rounded-3xl box-border min-h-40">
         {/* sección topCard */}
-        <div className="flex bg-white rounded-br-3xl">
+        <div className="flex bg-transparent rounded-br-3xl">
           {/* container de buttom */}
           <div className="relative pb-1.5">
             {/* objeto que simulan corte */}
@@ -112,37 +112,32 @@ export const Card = ({
             {/* button card */}
             <a
               href="#"
-              className="relative block rounded-full py-3 px-5 bg-gray-200 h-min z-10"
+              className="relative block rounded-full py-3 px-5 bg-white h-min z-10 border-2"
               >
               {/* componente iconoAstro */}
               {children}
             </a>
           </div>
           {/* title card*/}
-          <div className="text-xs z-0 flex flex-1 border-2 p-6 py-0 items-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 relative">
+          <div className=" bg-white text-4xl z-0 flex flex-1 border-2 p-6 py-0 items-center justify-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 relative">
             <div className="size-6 bg-white absolute bottom-[-2px] left-0"></div>
             <div className="size-6 bg-white absolute bottom-[-2px] right-0"></div>
-            <h2 className="text-gray-500 font-medium">
-              {
-                arrayT?.map((item)=>(
-                  <span className="first:text-black">{item}</span>
-                ))
-              }
-              </h2>
+            <h3 className="">
+              {title?.slice(0,1)}
+              </h3>
           </div>
         </div>
         {/* bottom cad */}
-        <div className="w-full h-full  flex  items-center text-xs border-2 rounded-3xl rounded-tr-none p-4 px-6 box-border">
-          <p className="text-lg font-normal">
-          {
-                arrayB?.map((item)=>(
-                  <span className="even:text-gray-500">{item}</span>
-                ))
-              }
+        <div className="bg-white w-full h-full flex flex-col text-xs border-2 rounded-3xl rounded-tr-none p-4 px-6 box-border gap-2">
+          <h2 className="text-base w-5/12 md:w-6/12">
+          {title?.slice(1,2)}
+          </h2>
+          <p className=" text-gray-500 ">
+          {body}
           </p>
         </div>
         <div></div>
-      </li>
+      </div>
     );
   }else if(type == 3){
     return(

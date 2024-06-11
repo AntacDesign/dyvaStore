@@ -1,17 +1,48 @@
 ---
+import { Icon } from "astro-icon/components";
 import Banner from "./Banner.astro";
-
+import { Card } from "./Card";
+const icons=(icon:String)=>{
+  switch (icon) {
+    case "arrow":
+      return "bitcoin-icons:arrow-right-filled"
+      break;
+    case "pieChart":
+      return "flowbite:chart-pie-outline"
+      break;
+      case "star":
+      return "hugeicons:star"
+      break;
+      case "scan":
+      return "mage:scan" 
+      break;
+    default:
+        return "no encontramos ese icono"
+      break;
+  }}
 
 ---
 
-<section class="container m-auto px-4 flex justify-center w-full">
-    <h2>
-
-    </h2>
-    <div>
-
+<section>
+    <div class="bg-gray-100 flex justify-center pt-7 pb-28">
+        <h2 class="text-xl container px-4">
+         WE'VE PARTNERED WITH <span class="text-gray-500">THE WORLD'S LEADING BRANDS AND RETAILERS</span> TO CREATE MORE THAN 200 VIRTUAL STORES AND EXPERIENCES.
+        </h2>
     </div>
-    <div class="text-5xl">
+    <section class="container m-auto px-4 mt-[-100px] flex flex-col md:flex-row list-none gap-6 pb-10">
+        <Card type={2} title={["90M+",'GROW CUSTOMER ENGAGEMENT']} body={["Consumer engagements in Obsess-powered virtual stores"]}>
+            <Icon name={icons('pieChart')} class="text-2xl"/>
+        </Card>
+
+        <Card type={2} title={["20X",'DRIVE BRAND EQUITY & LOYALTY']} body={["Higher time spent than tradicional e-commerce for leading Consumer Goods Brand"]}>
+            <Icon name={icons('star')} class="text-2xl"/>
+        </Card>
+
+        <Card  type={2} title={["60%",'TAP INTO FIRST PARTY DATA']} body={["Email + SMS opt-in rate in the virtual store for a Luxury Men's Grooming Brand"]}>
+            <Icon name={icons('scan')} class="text-2xl"/>
+        </Card>
+    </section>
+    <div class=" container m-auto px-4 pb-7 text-5xl">
         <Banner title={['VIRTUAL','FLAGSHIP','STORES']} img="imgs/app.webp" body={['HD quality, 3D CGI virtual stores, custom designed for brands in every industry--such as Fashion, Beuty, Media & EnterTainment, CPG and more.', "Reimagine engagement through inmersive,3D-rendered 360 experiences."]}></Banner>
     </div>
 </section>

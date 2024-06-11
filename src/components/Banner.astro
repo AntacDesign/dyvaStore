@@ -71,7 +71,7 @@ const { title, body, img } = Astro.props;
       <slot />
     </div>
   </picture>
-  <p class="empty:hidden flex py-5">
+  <p class="empty:hidden flex py-5 gap-6">
     {body?.map((item: string) => <span class=" text-sm flex flex-1">{item}</span>)}
   </p>
 </div>
