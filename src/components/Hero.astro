@@ -24,26 +24,26 @@ const icons=(icon:String)=>{
 
 <main class="flex flex-col mb-10">
   <!-- titulo -->
-  <h1 class="flex flex-col w-full overflow-x-hidden items-center text-5xl gap-4 py-7 self-center">
-    <span class="text-sombra translate-x-[-9rem]">VIRTUAL</span>
-    <span class="flex items-center translate-x-10">
+  <h1 class="flex flex-col w-full overflow-x-hidden items-center text-3xl sm:text-5xl gap-4 py-7 self-center">
+    <span class="text-sombra translate-x-[-6.5rem] sm:translate-x-[-9rem]">VIRTUAL</span>
+    <span class="flex items-center sm:translate-x-10">
       <span class="text-sombra " style="--gap:4em;"> STORE </span>
-      <span class="left-[100%] text-sm font-extralight w-[13em] ml-4 bg-white z-10"
+      <span class="left-[100%] text-[.55rem] leading-3 sm:text-sm font-extralight w-[13em] ml-4 bg-white z-10"
         >THE NEXT GENERATION OF E-COMMERCE</span
       ></span
     >
-    <span class="text-sombra translate-x-20" style="--gap:5.9em;">PLATFORM</span>
+    <span class="text-sombra translate-x-10 sm:translate-x-20" style="--gap:5.9em;">PLATFORM</span>
   </h1>
   <!-- cards con imagenes -->
   <section class="container m-auto flex flex-col md:flex-row list-none px-4 gap-8 gap-y-4 box-border my-4 md:h-72  md:max-h-72">
-    <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" title={[]} body={["Higher time spent than traditional e-commerce for a leading Consumer Goods Brand"]} img="/imgs/wall-ceil.webp" >
+    <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" body={["Higher time spent than traditional e-commerce for a leading Consumer Goods Brand"]} img="/imgs/wall-ceil.webp" >
       <Icon name={icons("arrow")} class="text-4xl text-gray-600"/>
     </Card>
-    <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" title={[]} body={[]} img="imgs/jeans-tshirt.webp">
+    <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" img="imgs/jeans-tshirt.webp">
       <Icon name={icons("arrow")} class="text-4xl text-gray-600 "/>
     </Card>
     <Card imgCss="max-h-72 h-72 bg-gray-100 rounded-2xl" type={1} title={["ALVA STONE",", SVP OF GLOBAL VISUAL EXPERIENCE"]} body={["People are looking for more than just products on a shelf. ","They want to learn about our brand's story, the narrative. ","That's what we've built with Obsess."]} >
-      <Icon name={icons("arrow")} class="text-2xl text-gray-600"/>
+      <Icon name={icons("arrow")} class="text-4xl text-gray-600"/>
     </Card>
   </section>
   <!-- card largeImage -->

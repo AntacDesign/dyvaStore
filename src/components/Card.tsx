@@ -30,9 +30,9 @@ export const Card = ({
         <div className="absolute bg-white pb-2 pr-2 rounded-br-3xl ">
           {/* objetos que simulan corte */}
           {/* arriba */}
-          <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-tr-none bg-transparent right-[-3.5em] rounded-full shadow-[-.6rem_-.9rem_0_white] z-[1]"></div>
+          <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-tr-none bg-transparent right-[-3.5rem] rounded-full shadow-[-.6rem_-.9rem_0_white] z-[1]"></div>
           {/* abajo */}
-          <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-bl-none bg-transparent bottom-[-2.5em] rounded-full shadow-[-.8rem_-.3rem_0_white] z-[1]"></div>
+          <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-bl-none bg-transparent bottom-[-2.5rem] rounded-full shadow-[-.8rem_-.3rem_0_white] z-[1]"></div>
           <a
             href="#"
             className=" block rounded-full py-3 px-5 bg-gray-200 h-min z-10"
@@ -60,7 +60,8 @@ export const Card = ({
       <li className="flex flex-col relative flex-1 rounded-3xl sm:aspect-[4/3] box-border min-h-40 max-h-72">
         {/* sección topCard */}
         <div className="flex bg-white rounded-br-3xl">
-          <div className="relative">
+          {/* container de buttom */}
+          <div className="relative pb-1.5">
             {/* objeto que simulan corte */}
             <div className="size-7 w-10 bg-transparent absolute right-[-.63rem] bottom-[-2px] rounded-br-3xl z-[1] border-2 border-t-0 border-s-0 shadow-[10px_8px_0_white]"></div>
             {/* button card */}
@@ -71,9 +72,9 @@ export const Card = ({
               {/* componente iconoAstro */}
               {children}
             </a>
-                </div>
-                {/* title card*/}
-          <div className="text-xs z-0 flex flex-1 border-2 p-6 py-0 items-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 h-14 relative">
+          </div>
+          {/* title card*/}
+          <div className="text-xs z-0 flex flex-1 border-2 p-6 py-0 items-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 relative">
             <div className="size-6 bg-white absolute bottom-[-2px] left-0"></div>
             <div className="size-6 bg-white absolute bottom-[-2px] right-0"></div>
             <h2 className="text-gray-500 font-medium">
@@ -85,7 +86,8 @@ export const Card = ({
               </h2>
           </div>
         </div>
-        <div className="w-full h-full  flex  items-center text-xs border-2 rounded-3xl rounded-tr-none p-4 box-border">
+        {/* bottom cad */}
+        <div className="w-full h-full  flex  items-center text-xs border-2 rounded-3xl rounded-tr-none p-4 px-6 box-border">
           <p className="text-lg font-normal">
           {
                 arrayB?.map((item)=>(
@@ -99,22 +101,47 @@ export const Card = ({
     );
   } else if (type == 2) {
     return (
-      <li className="relative">
-        <div className="absolute">
-          <a
-            href="#"
-            className="block rounded-2xl py-2 px-3 bg-gray-200 h-min w-min"
-          >
-            {children}
-          </a>
+      /* card solo texto 2*/
+      <li className="flex flex-col relative flex-1 rounded-3xl sm:aspect-[4/3] box-border min-h-40 max-h-72">
+        {/* sección topCard */}
+        <div className="flex bg-white rounded-br-3xl">
+          {/* container de buttom */}
+          <div className="relative pb-1.5">
+            {/* objeto que simulan corte */}
+            <div className="size-7 w-10 bg-transparent absolute right-[-.63rem] bottom-[-2px] rounded-br-3xl z-[1] border-2 border-t-0 border-s-0 shadow-[10px_8px_0_white]"></div>
+            {/* button card */}
+            <a
+              href="#"
+              className="relative block rounded-full py-3 px-5 bg-gray-200 h-min z-10"
+              >
+              {/* componente iconoAstro */}
+              {children}
+            </a>
+          </div>
+          {/* title card*/}
+          <div className="text-xs z-0 flex flex-1 border-2 p-6 py-0 items-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 relative">
+            <div className="size-6 bg-white absolute bottom-[-2px] left-0"></div>
+            <div className="size-6 bg-white absolute bottom-[-2px] right-0"></div>
+            <h2 className="text-gray-500 font-medium">
+              {
+                arrayT?.map((item)=>(
+                  <span className="first:text-black">{item}</span>
+                ))
+              }
+              </h2>
+          </div>
         </div>
-        <div>
-          <h2>{title}</h2>
-          <p>{body}</p>
+        {/* bottom cad */}
+        <div className="w-full h-full  flex  items-center text-xs border-2 rounded-3xl rounded-tr-none p-4 px-6 box-border">
+          <p className="text-lg font-normal">
+          {
+                arrayB?.map((item)=>(
+                  <span className="even:text-gray-500">{item}</span>
+                ))
+              }
+          </p>
         </div>
-        <div>
-          <p></p>
-        </div>
+        <div></div>
       </li>
     );
   }else if(type == 3){
@@ -125,9 +152,9 @@ export const Card = ({
       <div className="absolute bg-white pb-2 pr-2 rounded-br-3xl ">
         {/* objetos que simulan corte */}
         {/* arriba */}
-        <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-tr-none bg-transparent right-[-3.5em] rounded-full shadow-[-.6rem_-.9rem_0_white] z-[1]"></div>
+        <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-tr-none bg-transparent right-[-3.5rem] rounded-full shadow-[-.6rem_-.9rem_0_white] z-[1]"></div>
         {/* abajo */}
-        <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-bl-none bg-transparent bottom-[-2.5em] rounded-full shadow-[-.8rem_-.3rem_0_white] z-[1]"></div>
+        <div className="absolute pb-2 pr-2 block size-10 w-14 rounded-bl-none bg-transparent bottom-[-2.5rem] rounded-full shadow-[-.8rem_-.3rem_0_white] z-[1]"></div>
         <a
           href="#"
           className=" block rounded-full py-3 px-5 bg-gray-200 h-min z-10"

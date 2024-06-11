@@ -1,14 +1,21 @@
 ---
 interface Props {
-	title: Array<string>;
-	body?: Array<string>;
-	img?: string;
+  title: Array<string>;
+  body?: Array<string>;
+  img?: string;
 }
-const {title,body,img} =Astro.props
+const { title, body, img } = Astro.props;
 ---
+
 <div class="w-full max-w-3xl">
-    <picture class="w-full flex rounded-2xl aspect-[16/8] sm:aspect-[16/7] relative overflow-hidden">
-        <h2 class="z-10 absolute block">{title.map((item:string)=><span class="flex bg-white w-max p-1.5 py-1 pr-2 even:pr-5 rounded-tr-xl rounded-br-xl 
+  <picture
+    class="w-full flex rounded-2xl min-[320px]:aspect-[16/11] min-[600px]:aspect-[16/8] sm:aspect-[16/7] relative overflow-hidden"
+  >
+    <h2 class="z-10 absolute block">
+      {
+        title.map((item: string) => (
+          <span
+            class="flex bg-white w-max p-1.5 py-1 pr-2 even:pr-5 rounded-tr-xl rounded-br-xl 
         /* first */
         /* top */
         first:before:block 
@@ -48,13 +55,23 @@ const {title,body,img} =Astro.props
         last:after:left-0 
         last:after:rounded-tl-xl 
         last:after:shadow-[-.3rem_-.3rem_0_white]
-        relative">{item}</span>)}</h2>
-        <img src={img} class="w-full h-[102%] object-cover absolute rounded-[inherit] mt-[-2px] object-right" alt="imagen">
-        <div class="text-xs z-10 self-end flex flex-col py-4 px-5 gap-y-2">
-            <slot/>
-        </div>
-    </picture>
-    <p class="empty:hidden columns-2">
-        {body?.map((item:string)=><p>{item}</p>)}
-    </p>
+        relative"
+          >
+            {item}
+          </span>
+        ))
+      }
+    </h2>
+    <img
+      src={img}
+      class="w-full h-[102%] object-cover absolute rounded-[inherit] mt-[-2px] md:object-right"
+      alt="imagen"
+    />
+    <div class="text-xs z-10 self-end flex flex-col py-4 px-5 gap-y-2">
+      <slot />
+    </div>
+  </picture>
+  <p class="empty:hidden columns-2">
+    {body?.map((item: string) => <p>{item}</p>)}
+  </p>
 </div>

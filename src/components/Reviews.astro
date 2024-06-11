@@ -1,0 +1,45 @@
+---
+
+const reviews=[
+    {
+        user:'ESTHER HOWARD',
+        cargo:"VICE PRESIDENT OF MARKETING",
+        body:" It takes five to seven touchpoints with the American Girl brand before a customer makes a purchase. That's why having rich virtual content it worth investing in..it adds another interactive elements to or brand"
+    },
+    {
+        user:'KRISTIN WHATSON',
+        cargo:"CHEF GROWTH & TECHNOLOGY OFFICER",
+        body:"It takes five to seven touchpoints with the American Girl brand before a customer makes a purchase. That's why having rich virtual content it worth investing in..it adds another interactive elements to or brand"
+    },
+    {
+        user:'ANGELLO THORNE',
+        cargo:"SOFTWARE INGENIER",
+        body:"It takes five to seven touchpoints with the American Girl brand before a customer makes a purchase. That's why having rich virtual content it worth investing in..it adds another interactive elements to or brand"
+    },
+    {
+        user:'BRENDA PEREDA',
+        cargo:"ARCHITECT",
+        body:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem in eveniet, fugiat fugit ipsa maiores aperiam et! Quia labore corrupti voluptatem debitis odit modi? Itaque velit ipsa minima labore dolores."
+    },
+
+]
+---
+
+<section class=" border-t-2 border-b-2 py-14 overflow-x-hidden">
+    <div class="flex translate-x-[calc(-1*(57vw+1.5rem))] md:translate-x-[calc(-1*(37vw))]">
+    {reviews.map(
+        ({user,cargo,body})=>
+        <div class="flex flex-col gap-5 mx-6 min-w-[calc(80vw-5rem)] md:min-w-[calc(60vw-5rem)] odd:text-gray-500">
+            <h2 class="text-xs w-[12.9rem]">
+                {user},
+                <span class="text-gray-500">
+                    {cargo}
+                </span>
+            </h2>
+            <p class="md:text-xl">
+                {body}
+            </p>
+        </div>
+    )}
+    </div>
+</section>
