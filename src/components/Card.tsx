@@ -119,20 +119,21 @@ export const Card = ({
             </a>
           </div>
           {/* title card*/}
-          <div className=" bg-white text-4xl z-0 flex flex-1 border-2 p-6 py-0 items-center justify-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 relative">
-            <div className="size-6 bg-white absolute bottom-[-2px] left-0"></div>
-            <div className="size-6 bg-white absolute bottom-[-2px] right-0"></div>
+          <div className=" bg-white text-4xl z-0 flex flex-1 border-2 pt-1 items-center justify-center box-border rounded-tl-3xl rounded-tr-3xl border-b-0 ml-2 relative">
+            {/* linea */}
+            <div className="h-1 w-full bg-white absolute bottom-[-2px] left-0"></div>
+            <div className="h-px w-[calc(100%-3rem)] absolute bottom-[-1rem] border-b-2"></div>
             <h3 className="">
               {title?.slice(0,1)}
               </h3>
           </div>
         </div>
         {/* bottom cad */}
-        <div className="bg-white w-full h-full flex flex-col text-xs border-2 rounded-3xl rounded-tr-none p-4 px-6 box-border gap-2">
-          <h2 className="text-base w-5/12 md:w-6/12">
+        <div className=" bg-white w-full h-full flex flex-col text-xs border-2 rounded-3xl rounded-tr-none p-7 box-border gap-2">
+          <h2 className="text-base w-[10em]">
           {title?.slice(1,2)}
           </h2>
-          <p className=" text-gray-500 ">
+          <p className=" text-gray-500">
           {body}
           </p>
         </div>
