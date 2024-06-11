@@ -3,11 +3,13 @@ import Banner from './Banner.astro'
 ---
 
 <form class=" px-6 py-16 text-3xl sm:text-5xl md:text-6xl flex w-full justify-center">
-    <Banner title={["ARE YOU","OBSESSED?","LET'S TALK."]} img="imgs/girl.webp">
-        <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur.</p>
-        <div class="bg-white p-1 pl-3 rounded-lg">
-            <input type="email" name="contact" id="contact" placeholder="askyou@gmail.com" class="focus:outline-none">
-            <button type="submit" class="bg-gray-700 text-white px-4 py-2 rounded-md text-xs">Send</button>
-        </div>
-    </Banner>
+    <div class="w-full max-w-3xl">
+        <Banner title={["ARE YOU","OBSESSED?","LET'S TALK."]} img="imgs/girl.webp">
+            <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="bg-white p-1 pl-3 rounded-lg">
+                <input type="email" name="contact" id="contact" placeholder="askyou@gmail.com" class="focus:outline-none">
+                <button type="submit" class="bg-gray-700 text-white px-4 py-2 rounded-md text-xs">Send</button>
+            </div>
+        </Banner>
+    </div>
 </form>

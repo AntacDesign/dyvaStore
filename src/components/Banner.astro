@@ -7,7 +7,7 @@ interface Props {
 const { title, body, img } = Astro.props;
 ---
 
-<div class="w-full max-w-3xl">
+<div class="max-w-[inherit]">
   <picture
     class="w-full flex rounded-2xl min-[320px]:aspect-[16/11] min-[600px]:aspect-[16/8] sm:aspect-[16/7] relative overflow-hidden"
   >
@@ -71,7 +71,7 @@ const { title, body, img } = Astro.props;
       <slot />
     </div>
   </picture>
-  <p class="empty:hidden columns-2">
-    {body?.map((item: string) => <p>{item}</p>)}
+  <p class="empty:hidden flex py-5">
+    {body?.map((item: string) => <span class=" text-sm flex flex-1">{item}</span>)}
   </p>
 </div>
