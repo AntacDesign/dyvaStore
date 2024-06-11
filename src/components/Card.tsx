@@ -146,7 +146,7 @@ export const Card = ({
     );
   }else if(type == 3){
     return(
-      /* card imagen */
+      /* card LargeImage */
       <li className="flex flex-col relative flex-1 rounded-2xl h-[inherit] max-h-[inherit] box-border w-full">
       {/* button card */}
       <div className="absolute bg-white pb-2 pr-2 rounded-br-3xl ">
@@ -165,7 +165,7 @@ export const Card = ({
       </div>
       {/* sección de imagen */}
       <div className={imgCss}>
-        <img src={img} alt="" className="object-left-bottom h-full w-full object-cover rounded-2xl" />
+        <img src={img} alt="" className="object-center sm:object-left-bottom h-full w-full object-cover rounded-2xl" />
       </div>
       {/* bottom card */}
       <div

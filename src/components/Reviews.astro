@@ -25,11 +25,17 @@ const reviews=[
 ]
 ---
 
-<section class=" border-t-2 border-b-2 py-14 overflow-x-hidden">
-    <div class="flex translate-x-[calc(-1*(57vw+1.5rem))] md:translate-x-[calc(-1*(37vw))]">
+<section class=" border-t-2 border-b-2 py-14 overflow-x-hidden relative">
+    <!-- button back -->
+    <button aria-details="button back" class="absolute top-0 bottom-0 w-1/6 md:w-2/6 border-2">
+    </button>
+    <!-- button next -->
+    <button aria-details="button back" class="absolute top-0 bottom-0 right-0 w-1/6 md:w-2/6 border-2">
+    </button>
+    <div class="flex ml-[calc(-50vw-6.8rem)] md:ml-[calc(-25vw+2.5rem)]">
     {reviews.map(
         ({user,cargo,body})=>
-        <div class="flex flex-col gap-5 mx-6 min-w-[calc(80vw-5rem)] md:min-w-[calc(60vw-5rem)] odd:text-gray-500">
+        <div class="flex flex-col gap-5 mx-5 min-w-[calc((200vw+5rem)/3)] md:min-w-[calc((120vw+10rem)/3)] odd:text-gray-500 ">
             <h2 class="text-xs w-[12.9rem]">
                 {user},
                 <span class="text-gray-500">
